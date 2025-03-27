@@ -145,10 +145,58 @@ public class Main {
 		z = Math.sqrt((x*x)+(y*y));
 		
 		System.out.println("La hipotenusa es: "+z);
+		
+		
+		int x = random.nextInt(6)+1;
+		double y = random.nextDouble();
+		boolean z = random.nextBoolean();
+		
+		System.out.println("Numero: "+z);
+		
+		
+		
+		String dia = "Martes";
+		
+		switch(dia) {
+		case "Lunes": 
+			System.out.println("Es Lunes"); 
+			break;
+			
+		case "Martes": 
+			System.out.println("Es Martes"); 
+			break;
+			
+		case "Miercoles": 
+			System.out.println("Es Miercoles"); 
+			break;
+			
+		default:
+			System.out.println("Default");
+		}
+		
+		//respuesta.equals(?);
+		
+		String nombre = "";
+		while(nombre.isBlank()) {
+			System.out.println("Ingrese su nombre");
+			nombre = entrada.nextLine();
+		}
+		
+		System.out.println("Hola "+nombre);
+		
+		
+		String nombre = "";
+		do{
+			System.out.println("Ingrese su nombre");
+			nombre = entrada.nextLine();
+		}while(nombre.isBlank());
+		
+		System.out.println("Hola "+nombre);
 		*/
 		
-		int x = random.nextInt();
-		System.out.println("Numero: "+x);
+		
+		
+		
 		
 	}
 }
