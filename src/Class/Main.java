@@ -192,11 +192,65 @@ public class Main {
 		}while(nombre.isBlank());
 		
 		System.out.println("Hola "+nombre);
+		
+		
+		for(int i = 10; i > 0; i--) {
+			System.out.println(i);;
+		}
+		System.out.println("Feliz año");
 		*/
 		
+		int opcion;
+		do {
+		System.out.println("========Calculadora========");
+		System.out.println("1. Sumar");
+		System.out.println("2. Restar");
+		System.out.println("3. Multiplicar");
+		System.out.println("4. Dividir");
+		System.out.println("5. Potencia");
+		System.out.println("6. Modulo");
+		System.out.println("7. Salir");
 		
+		System.out.println("Elige una opción: ");
+		opcion = entrada.nextInt();
 		
-		
-		
+		if (opcion >= 1 && opcion <= 6) {
+		System.out.println("Ingresa primer número: ");
+		double N1 = entrada.nextDouble();
+		System.out.println("Ingresa segundo número: ");
+		double N2 = entrada.nextDouble();
+		double resultado = 0;
+		switch(opcion) {
+		case 1: 
+			resultado = N1 + N2;
+			break;
+		case 2: 
+			resultado = N1 - N2;
+			break;
+		case 3: 
+			resultado = N1 * N2;
+			break;
+		case 4: 
+			if(N2>0) {
+			resultado = N1 / N2;
+			}else {
+				System.out.println("El divisor debe ser mayor que 0");
+				continue;
+			}
+			break;
+		case 5: 
+			resultado = Math.pow(N1, N2);
+			break;
+		case 6: 
+			resultado = N1 % N2;
+			break;
+		}
+			System.out.println("El resultado es: " + resultado);
+		}else if(opcion !=7) {
+			System.out.println("Opcion no valida"); 
+		}
+		}while(opcion!=7);
+		System.out.println("Saliendo de la calculadora...");
+	
 	}
 }
